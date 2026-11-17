@@ -1,477 +1,633 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Las reformas a la Constitución de 1993 · Registro</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>La Constitución de 1993 y sus reformas</title>
+<meta name="description" content="Registro de las leyes de reforma de la Constitución Política del Perú de 1993, con mapa por artículo, buscador y la calculadora de votaciones del Congreso bicameral.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231E3B2F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23EFF1E8'%3E%C2%A7%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fuentes/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  :root{
-    --papel:#eeeee8;
-    --papel-card:#f6f6f1;
-    --tinta:#18222e;
-    --tinta-soft:#4c5661;
-    --tinta-faint:#7b838c;
-    --carmin:#9d1128;
-    --carmin-soft:#c0475b;
-    --oro:#9c7620;
-    --oro-soft:#c79a3a;
-    --linea:#d7d6cc;
-    --linea-fuerte:#bcbbaf;
-    --sombra:0 1px 0 rgba(24,34,46,.04);
-  }
-  :root:not([data-theme="light"]){}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --papel:#12181f;
-      --papel-card:#1a222c;
-      --tinta:#e9e7de;
-      --tinta-soft:#a7aeb6;
-      --tinta-faint:#7c848d;
-      --carmin:#e07a8b;
-      --carmin-soft:#c0475b;
-      --oro:#d9b25c;
-      --oro-soft:#c79a3a;
-      --linea:#2b333d;
-      --linea-fuerte:#3a434e;
-    }
-  }
-  :root[data-theme="dark"]{
-    --papel:#12181f;
-    --papel-card:#1a222c;
-    --tinta:#e9e7de;
-    --tinta-soft:#a7aeb6;
-    --tinta-faint:#7c848d;
-    --carmin:#e07a8b;
-    --carmin-soft:#c0475b;
-    --oro:#d9b25c;
-    --oro-soft:#c79a3a;
-    --linea:#2b333d;
-    --linea-fuerte:#3a434e;
-  }
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url(fuentes/source-serif-4-latin-opsz-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:200 900;font-display:swap;src:url(fuentes/source-serif-4-latin-opsz-italic.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-style:normal;font-weight:100 900;font-display:swap;src:url(fuentes/public-sans-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-style:italic;font-weight:100 900;font-display:swap;src:url(fuentes/public-sans-latin-wght-italic.woff2) format("woff2")}
+</style>
+<style>
+:root{
+  --papel:#EFF1E8;
+  --hoja:#FAFBF6;
+  --hundido:#E3E7DA;
+  --tinta:#1B1F1C;
+  --tinta-2:#465049;
+  --tinta-3:#5E6760;
+  --linea:#C3CABA;
+  --pino:#1E3B2F;
+  --pino-2:#2F5A47;
+  --pino-3:#7FA48C;
+  --pino-4:#CBDBCD;
+  --carmin:#9B1C2E;
+  --ocre:#8A5D0E;
+  --ocre-fondo:#F3E6C9;
+  --carmin-fondo:#F4DDE0;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ancho:1120px;
+}
+*{box-sizing:border-box}
+html{font-size:100%;-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+html.grande{font-size:125%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:1.125rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--pino-2);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--carmin);outline-offset:2px}
+.envoltura{max-width:var(--ancho);margin:0 auto;padding-inline:clamp(18px,4vw,40px)}
+[hidden]{display:none!important}
 
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--papel);color:var(--tinta);
-    font-family:"Spectral",Georgia,serif;
-    font-size:18px;line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+/* ---------- barra superior ---------- */
+.barra{position:sticky;top:0;z-index:20;background:var(--pino);color:var(--papel)}
+.barra .envoltura{display:flex;align-items:center;gap:6px 22px;flex-wrap:wrap;padding-block:10px}
+.barra .sitio{font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--papel);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+.barra .sitio b{display:inline-grid;place-items:center;width:30px;height:30px;border:1.5px solid var(--pino-4);border-radius:4px;font-family:var(--serif);font-size:1.1rem}
+.paginas{display:flex;gap:4px;flex-wrap:wrap}
+.paginas a{color:var(--papel);text-decoration:none;padding:8px 14px;border-radius:6px;font-size:1rem}
+.paginas a:hover{background:rgba(255,255,255,.1)}
+.paginas a[aria-current="page"]{background:var(--papel);color:var(--pino);font-weight:700}
+.btn-letra{font:inherit;font-size:1rem;font-weight:700;background:transparent;color:var(--papel);border:1.5px solid var(--pino-4);border-radius:6px;padding:7px 14px;cursor:pointer;min-height:42px}
+.btn-letra[aria-pressed="true"]{background:var(--papel);color:var(--pino)}
+.indice{background:var(--hundido);border-bottom:1px solid var(--linea)}
+.indice .envoltura{display:flex;gap:4px 20px;flex-wrap:wrap;padding-block:9px;font-size:1rem}
+.indice a{color:var(--tinta-2);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.indice a:hover{color:var(--pino);border-bottom-color:var(--pino-3)}
 
-  /* ============ HERO ============ */
-  .hero{
-    background:var(--tinta);color:var(--papel);
-    padding:0;position:relative;overflow:hidden;
-  }
-  :root[data-theme="dark"] .hero, 
-  .hero{ }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .hero{background:#0c1219}
-  }
-  :root[data-theme="dark"] .hero{background:#0c1219}
-  .hero .wrap{padding-top:76px;padding-bottom:60px}
-  .hero .marca{
-    font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;
-    color:var(--oro-soft);margin:0 0 30px;
-  }
-  .hero h1{
-    font-family:"Libre Caslon Display",serif;font-weight:400;
-    font-size:clamp(38px,7.4vw,74px);line-height:1.03;
-    letter-spacing:.002em;margin:0;color:#f6f4ec;
-  }
-  .hero .lede{
-    font-family:"Spectral",serif;font-style:italic;font-weight:400;
-    font-size:clamp(18px,2.6vw,22px);line-height:1.5;
-    color:#c8ccce;max-width:40ch;margin:26px 0 0;
-  }
-  .stats{
-    display:grid;grid-template-columns:repeat(5,1fr);
-    margin:52px 0 0;border-top:1px solid rgba(255,255,255,.16);
-  }
-  .stats .s{padding:22px 20px 4px 0}
-  .stats .s .n{
-    font-family:"Libre Caslon Display",serif;font-size:clamp(30px,4.4vw,42px);
-    line-height:1;color:#f6f4ec;display:block;
-  }
-  .stats .s.oro .n{color:var(--oro-soft)}
-  .stats .s.car .n{color:var(--carmin-soft)}
-  .stats .s .k{
-    font-family:"Archivo",sans-serif;font-size:12.5px;line-height:1.35;
-    color:#9aa0a4;margin-top:9px;font-weight:500;
-  }
-  @media (max-width:760px){
-    .stats{grid-template-columns:1fr 1fr;gap:0}
-    .stats .s{border-bottom:1px solid rgba(255,255,255,.1);padding-right:14px}
-  }
+/* ---------- portada con el mapa ---------- */
+.portada{padding-block:clamp(36px,6vw,64px) clamp(28px,4vw,44px)}
+.portada .envoltura{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-areas:"titulo mapa" "preguntar mapa";grid-template-rows:auto 1fr;column-gap:clamp(28px,5vw,64px);align-items:start}
+.titulo{grid-area:titulo}
+.preguntar{grid-area:preguntar}
+.mapa-caja{grid-area:mapa}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.3rem,4.6vw,3.6rem);line-height:1.04;letter-spacing:-.012em;margin:0;font-variation-settings:"opsz" 60;text-wrap:balance}
+.entrada{font-family:var(--serif);font-size:1.25rem;line-height:1.5;color:var(--tinta-2);margin:18px 0 0;max-width:34ch}
+.preguntar{margin-top:28px;background:var(--hoja);border:1px solid var(--linea);border-radius:10px;padding:20px 22px}
+.preguntar label{display:block;font-weight:700;font-size:1.05rem;margin-bottom:10px}
+.fila-art{display:flex;gap:10px;flex-wrap:wrap}
+.fila-art input{font:inherit;font-size:1.35rem;width:8.5rem;padding:10px 14px;border:2px solid var(--linea);border-radius:8px;background:#fff;color:var(--tinta)}
+.fila-art input:focus{border-color:var(--pino);outline:none}
+.fila-art button,.btn{font:inherit;font-size:1.05rem;font-weight:700;background:var(--pino);color:var(--papel);border:0;border-radius:8px;padding:10px 18px;cursor:pointer;min-height:48px}
+.fila-art button:hover,.btn:hover{background:var(--pino-2)}
+.atajos{margin-top:12px;font-size:.98rem;color:var(--tinta-3)}
+.atajos button{font:inherit;font-size:.98rem;background:none;border:0;color:var(--pino-2);text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:2px 3px}
+.ficha{margin-top:18px;border-top:2px solid var(--pino);padding-top:16px}
+.ficha h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:0;line-height:1.15}
+.ficha .resumen{margin:4px 0 12px;color:var(--tinta-2)}
+.ficha ol{list-style:none;margin:0;padding:0}
+.ficha li{padding:10px 0;border-top:1px solid var(--linea);display:grid;grid-template-columns:7.2rem 1fr;gap:4px 14px}
+.ficha li .n{font-weight:700}
+.ficha li .f{display:block;font-size:.92rem;color:var(--tinta-3);font-weight:400}
+.ficha li .m{font-family:var(--serif);line-height:1.45}
+.ficha li.anulada .m,.ficha li.anulada .n b{text-decoration:line-through;text-decoration-color:var(--carmin)}
+.ficha li .etq{display:inline-block;margin-top:4px;font-family:var(--sans);font-size:.85rem;font-weight:700;color:var(--carmin)}
 
-  /* ============ CONTROLES ============ */
-  .controls{
-    position:sticky;top:0;z-index:20;background:var(--papel);
-    border-bottom:1px solid var(--linea-fuerte);
-    padding:14px 0;
-  }
-  .controls .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-  .search{
-    flex:1 1 220px;display:flex;align-items:center;gap:9px;
-    background:var(--papel-card);border:1px solid var(--linea-fuerte);
-    border-radius:2px;padding:9px 13px;
-  }
-  .search svg{flex:none;opacity:.5}
-  .search input{
-    border:0;background:transparent;outline:none;width:100%;
-    font-family:"Archivo",sans-serif;font-size:15px;color:var(--tinta);
-  }
-  .search input::placeholder{color:var(--tinta-faint)}
-  .filtros{display:flex;flex-wrap:wrap;gap:7px}
-  .fbtn{
-    font-family:"Archivo",sans-serif;font-size:13.5px;font-weight:500;
-    color:var(--tinta-soft);background:transparent;
-    border:1px solid var(--linea-fuerte);border-radius:2px;
-    padding:8px 13px;cursor:pointer;transition:background .12s,color .12s,border-color .12s;
-    white-space:nowrap;
-  }
-  .fbtn:hover{border-color:var(--tinta-soft)}
-  .fbtn[aria-pressed="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta)}
-  .fbtn.oro[aria-pressed="true"]{background:var(--oro);border-color:var(--oro);color:#fff}
-  .fbtn.car[aria-pressed="true"]{background:var(--carmin);border-color:var(--carmin);color:#fff}
-  .conteo{
-    font-family:"Archivo",sans-serif;font-size:13px;color:var(--tinta-faint);
-    padding:2px 0;margin-left:auto;
-  }
+.mapa-caja h2{font-family:var(--sans);font-size:1.05rem;font-weight:700;margin:0 0 4px}
+.mapa-caja .guia{margin:0 0 14px;color:var(--tinta-2);font-size:1rem}
+.mapa{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:3px}
+.celda{appearance:none;font-family:var(--sans);font-size:.74rem;font-weight:700;font-variant-numeric:tabular-nums;aspect-ratio:1/1;min-width:0;padding:0;border:1px solid var(--linea);background:var(--hoja);color:var(--tinta-3);border-radius:3px;cursor:pointer;line-height:1;display:grid;place-items:center;overflow:hidden}
+.celda.n1{background:var(--pino-4);border-color:var(--pino-4);color:var(--pino)}
+.celda.n2{background:var(--pino-3);border-color:var(--pino-3);color:#0f2219}
+.celda.n3{background:var(--pino-2);border-color:var(--pino-2);color:#fff}
+.celda.n4{background:var(--pino);border-color:var(--pino);color:#fff}
+.celda.nuevo{border-style:dashed;border-width:2px;border-color:var(--pino-2)}
+.celda.derogado{background:repeating-linear-gradient(135deg,var(--hoja) 0 4px,var(--hundido) 4px 8px);color:var(--tinta-3)}
+.celda:hover{outline:2px solid var(--tinta);outline-offset:0}
+.celda[aria-pressed="true"]{outline:3px solid var(--carmin);outline-offset:1px;position:relative;z-index:1}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-size:.93rem;color:var(--tinta-2)}
+.leyenda span{display:inline-flex;align-items:center;gap:7px}
+.leyenda i{width:16px;height:16px;border-radius:3px;border:1px solid var(--linea);background:var(--hoja);display:inline-block}
+.leyenda i.n1{background:var(--pino-4);border-color:var(--pino-4)}
+.leyenda i.n2{background:var(--pino-3);border-color:var(--pino-3)}
+.leyenda i.n3{background:var(--pino);border-color:var(--pino)}
+.leyenda i.nuevo{border:2px dashed var(--pino-2)}
+.cifra-mapa{margin:16px 0 0;font-family:var(--serif);font-size:1.1rem;line-height:1.5;color:var(--tinta-2);max-width:60ch}
+.cifra-mapa b{color:var(--tinta)}
+.celda.nuevo{font-size:.6rem;letter-spacing:-.02em;white-space:nowrap}
+html.grande .celda{font-size:.62rem}
+html.grande .celda.nuevo{font-size:.48rem}
+@media (max-width:900px){
+  .portada .envoltura{grid-template-columns:1fr;grid-template-areas:"titulo" "mapa" "preguntar";row-gap:26px}
+  .mapa{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .preguntar{margin-top:0}
+}
+@media (max-width:700px){
+  .barra{position:static}
+  .barra .envoltura{gap:8px 10px}
+  .barra .sitio{width:100%}
+  .paginas a{padding:7px 10px}
+  .btn-letra{margin-left:auto;min-height:38px;padding:5px 10px}
+  .indice .envoltura{flex-wrap:nowrap;overflow-x:auto;gap:18px;white-space:nowrap}
+  html{scroll-padding-top:12px}
+}
+@media (max-width:480px){
+  .mapa{grid-template-columns:repeat(10,minmax(0,1fr))}
+  .celda{font-size:.68rem}
+  .ficha li{grid-template-columns:1fr}
+  .arriba{padding:9px 14px;font-size:.92rem;right:12px;bottom:12px}
+}
 
-  /* ============ TIMELINE ============ */
-  main{padding:8px 0 40px}
-  .grupo{margin:44px 0 0}
-  .grupo-h{
-    display:flex;align-items:baseline;gap:14px;
-    padding:0 0 16px;margin:0 0 6px;
-    border-bottom:2px solid var(--tinta);
-  }
-  .grupo-h .yr{
-    font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;
-    color:var(--carmin);letter-spacing:.01em;flex:none;
-  }
-  .grupo-h .nom{
-    font-family:"Spectral",serif;font-weight:500;font-size:18px;color:var(--tinta);
-  }
-  .grupo-h .cnt{
-    font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--tinta-faint);
-    margin-left:auto;flex:none;
-  }
+/* ---------- secciones ---------- */
+.seccion{padding-block:clamp(40px,6vw,64px);border-top:1px solid var(--linea)}
+.seccion h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,3.2vw,2.4rem);line-height:1.12;margin:0;letter-spacing:-.01em;font-variation-settings:"opsz" 40}
+.seccion .bajada{font-family:var(--serif);font-size:1.15rem;color:var(--tinta-2);margin:10px 0 0;max-width:62ch;line-height:1.55}
 
-  .card{
-    display:grid;grid-template-columns:96px 1fr;gap:22px;
-    padding:22px 0;border-bottom:1px solid var(--linea);
-    scroll-margin-top:120px;
-  }
-  .card .rail{padding-top:3px}
-  .card .num{
-    font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;
-    color:var(--tinta);display:block;letter-spacing:.005em;
-  }
-  .card .fecha{
-    font-family:"Archivo",sans-serif;font-size:12px;color:var(--tinta-faint);
-    margin-top:4px;display:block;
-  }
-  .card .cuerpo{min-width:0}
-  .card .materia{
-    font-family:"Spectral",serif;font-size:17.5px;line-height:1.5;
-    color:var(--tinta);margin:0;
-  }
-  .card.estructural .materia{font-weight:500}
-  .arts{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-  .art{
-    font-family:"Archivo",sans-serif;font-size:11.5px;font-weight:500;
-    color:var(--tinta-soft);background:var(--papel-card);
-    border:1px solid var(--linea-fuerte);border-radius:2px;padding:3px 8px;
-  }
-  .sello{
-    font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;
-    display:inline-flex;align-items:center;gap:6px;
-    padding:3px 9px;border-radius:2px;
-  }
-  .sello::before{content:"";width:6px;height:6px;border-radius:50%}
-  .sello.oro{color:var(--oro);border:1px solid var(--oro)}
-  .sello.oro::before{background:var(--oro)}
-  .sello.car{color:var(--carmin);border:1px solid var(--carmin)}
-  .sello.car::before{background:var(--carmin)}
-  .sello.est{color:var(--tinta-soft);border:1px solid var(--linea-fuerte)}
-  .sello.est::before{background:var(--tinta-soft)}
-  .card.anulada .num,.card.anulada .materia{
-    text-decoration:line-through;text-decoration-color:var(--carmin-soft);
-    text-decoration-thickness:1px;color:var(--tinta-soft);
-  }
-  .card .nota{
-    font-family:"Spectral",serif;font-style:italic;font-size:14.5px;
-    color:var(--tinta-faint);margin:9px 0 0;line-height:1.45;
-  }
+/* lista de leyes */
+.herramientas{position:sticky;top:62px;z-index:10;background:var(--papel);padding:16px 0 14px;margin-top:22px;border-bottom:1px solid var(--linea)}
+.buscador{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--linea);border-radius:10px;padding:4px 14px}
+.buscador:focus-within{border-color:var(--pino)}
+.buscador svg{flex:none;color:var(--tinta-3)}
+.buscador input{font:inherit;font-size:1.2rem;border:0;outline:0;background:transparent;width:100%;padding:10px 0;color:var(--tinta)}
+.buscador button{font:inherit;font-size:.95rem;border:0;background:var(--hundido);border-radius:6px;padding:6px 12px;cursor:pointer;color:var(--tinta-2)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.filtro{font:inherit;font-size:1rem;background:var(--hoja);color:var(--tinta);border:1.5px solid var(--linea);border-radius:999px;padding:8px 16px;cursor:pointer;min-height:44px}
+.filtro[aria-pressed="true"]{background:var(--tinta);color:var(--papel);border-color:var(--tinta);font-weight:700}
+.filtro.ref[aria-pressed="true"]{background:var(--ocre);border-color:var(--ocre)}
+.filtro.anu[aria-pressed="true"]{background:var(--carmin);border-color:var(--carmin)}
+.conteo{margin-left:auto;font-size:.98rem;color:var(--tinta-3)}
+.acciones-lista{display:flex;gap:10px;flex-wrap:wrap}
+.btn-sec{font:inherit;font-size:.98rem;background:transparent;color:var(--pino);border:1.5px solid var(--pino);border-radius:8px;padding:8px 14px;cursor:pointer;min-height:44px}
+.btn-sec:hover{background:var(--hoja)}
 
-  @media (max-width:640px){
-    .card{grid-template-columns:1fr;gap:9px}
-    .card .rail{display:flex;align-items:baseline;gap:12px;padding-top:0}
-    .card .fecha{margin-top:0}
-  }
+.periodo{margin-top:34px}
+.periodo-cab{display:grid;grid-template-columns:9.5rem 1fr;gap:14px;align-items:baseline;padding-bottom:10px;border-bottom:2px solid var(--pino)}
+.periodo-cab .anios{font-weight:700;font-variant-numeric:tabular-nums;color:var(--pino)}
+.periodo-cab h3{font-family:var(--serif);font-weight:600;font-size:1.4rem;margin:0;line-height:1.2}
+.periodo-cab .cuantas{font-size:.95rem;color:var(--tinta-3);font-weight:400;font-family:var(--sans);margin-left:8px}
+.ley{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:6px 14px;padding:18px 0;border-bottom:1px solid var(--linea)}
+.ley .num{font-weight:700;font-size:1.15rem;line-height:1.25;font-variant-numeric:tabular-nums}
+.ley .fec{display:block;font-weight:400;font-size:.95rem;color:var(--tinta-3);margin-top:2px}
+.ley .materia{font-family:var(--serif);font-size:1.18rem;line-height:1.48;margin:0;max-width:62ch}
+.ley.grande .materia{font-weight:600}
+.arts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.art{font-size:.9rem;background:var(--hundido);border-radius:5px;padding:3px 9px;color:var(--tinta-2);white-space:nowrap}
+.sello{font-size:.9rem;font-weight:700;border-radius:5px;padding:3px 9px;white-space:nowrap}
+.sello.ref{background:var(--ocre-fondo);color:var(--ocre)}
+.sello.anu{background:var(--carmin-fondo);color:var(--carmin)}
+.sello.ord{background:var(--hundido);color:var(--tinta)}
+.sello.gra{background:var(--pino-4);color:var(--pino)}
+.ley.anulada .num b,.ley.anulada .materia{text-decoration:line-through;text-decoration-color:var(--carmin);text-decoration-thickness:2px;color:var(--tinta-2)}
+.nota{font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--tinta-2);margin:10px 0 0;max-width:62ch;padding-left:12px;border-left:3px solid var(--linea)}
+.vacio{padding:18px 0;color:var(--tinta-2);font-family:var(--serif);font-size:1.1rem;border-bottom:1px solid var(--linea)}
+.sin-resultados{padding:40px 0;font-family:var(--serif);font-size:1.2rem;color:var(--tinta-2)}
+@media (max-width:640px){
+  .periodo-cab,.ley{grid-template-columns:1fr}
+  .herramientas{top:0;position:relative}
+  .conteo{margin-left:0;width:100%}
+}
 
-  /* ============ BLOQUES DE ENSAYO ============ */
-  .roznai{
-    margin:64px 0 0;padding:38px 40px;
-    background:var(--tinta);color:#e9e7de;border-radius:3px;
-  }
-  :root[data-theme="dark"] .roznai{background:#0c1219;border:1px solid var(--linea)}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .roznai{background:#0c1219;border:1px solid var(--linea)}}
-  .roznai .et{
-    font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;
-    color:var(--carmin-soft);margin:0 0 14px;
-  }
-  .roznai h2{
-    font-family:"Libre Caslon Display",serif;font-weight:400;
-    font-size:clamp(24px,4vw,32px);line-height:1.12;margin:0 0 16px;color:#f6f4ec;
-  }
-  .roznai p{font-size:16px;line-height:1.62;color:#cdd0d2;margin:0 0 14px;max-width:62ch}
-  .roznai p:last-child{margin-bottom:0}
-  .roznai b{color:#f6f4ec;font-weight:600}
-  .roznai .trio{
-    display:grid;gap:1px;background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.1);margin:22px 0;border-radius:2px;overflow:hidden;
-  }
-  .roznai .trio .t{background:var(--tinta);padding:15px 18px}
-  :root[data-theme="dark"] .roznai .trio .t{background:#0c1219}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .roznai .trio .t{background:#0c1219}}
-  .roznai .trio .ley{font-family:"Archivo",sans-serif;font-weight:700;font-size:14px;color:var(--carmin-soft)}
-  .roznai .trio .d{font-size:14.5px;color:#cdd0d2;margin-top:3px}
+/* cómo se reforma */
+.vias{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.via{background:var(--hoja);border:1px solid var(--linea);border-top:6px solid var(--ocre);border-radius:10px;padding:24px 26px}
+.via.dos{border-top-color:var(--pino)}
+.via h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;margin:0 0 6px;line-height:1.2}
+.via .quien{margin:0 0 16px;color:var(--tinta-2)}
+.pasos{list-style:none;margin:0;padding:0;counter-reset:p}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:2.2rem 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--linea);align-items:start}
+.pasos li::before{content:counter(p);display:grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--pino);color:var(--papel);font-weight:700}
+.via:not(.dos) .pasos li::before{background:var(--ocre)}
+.votos{display:flex;gap:18px;margin-top:6px;flex-wrap:wrap}
+.votos span{font-size:.98rem;color:var(--tinta-2)}
+.votos b{font-size:1.6rem;color:var(--tinta);font-variant-numeric:tabular-nums;margin-right:4px}
+.via .pie{margin:14px 0 0;font-size:1rem;color:var(--tinta-2)}
+.reglas{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.regla{border-top:2px solid var(--tinta);padding-top:12px}
+.regla h4{font-family:var(--serif);font-size:1.15rem;font-weight:600;margin:0 0 6px}
+.regla p{margin:0;color:var(--tinta-2);font-size:1.02rem}
+.aviso-calc{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;background:var(--pino);color:var(--papel);border-radius:10px;padding:20px 24px}
+.aviso-calc p{margin:0;font-family:var(--serif);font-size:1.15rem;max-width:56ch}
+.aviso-calc a{display:inline-block;background:var(--papel);color:var(--pino);font-weight:700;text-decoration:none;border-radius:8px;padding:11px 18px}
+@media (max-width:800px){.vias,.reglas{grid-template-columns:1fr}}
 
-  .nota-metodo{
-    margin:52px 0 0;padding:28px 32px;
-    background:var(--papel-card);border:1px solid var(--linea-fuerte);border-radius:3px;
-  }
-  .nota-metodo h3{
-    font-family:"Spectral",serif;font-weight:600;font-size:19px;margin:0 0 12px;color:var(--tinta);
-  }
-  .nota-metodo p{font-size:15.5px;line-height:1.6;color:var(--tinta-soft);margin:0 0 10px}
-  .nota-metodo p:last-child{margin-bottom:0}
-  .nota-metodo b{color:var(--tinta);font-weight:600}
+/* roznai */
+.dos-col{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:clamp(24px,4vw,48px);margin-top:22px;align-items:start}
+.texto p{font-family:var(--serif);font-size:1.15rem;line-height:1.62;margin:0 0 16px;max-width:64ch}
+.anuladas{background:var(--hoja);border:1px solid var(--linea);border-left:6px solid var(--carmin);border-radius:8px;padding:18px 22px}
+.anuladas h3{font-family:var(--sans);font-size:1.05rem;margin:0 0 6px}
+.anuladas ul{list-style:none;margin:0;padding:0}
+.anuladas li{padding:10px 0;border-top:1px solid var(--linea)}
+.anuladas li b{display:block}
+.anuladas li span{font-family:var(--serif);color:var(--tinta-2)}
+@media (max-width:800px){.dos-col{grid-template-columns:1fr}}
 
-  footer{
-    margin:56px 0 0;padding:28px 0 64px;border-top:1px solid var(--linea);
-    font-family:"Archivo",sans-serif;font-size:12.5px;line-height:1.7;color:var(--tinta-faint);
-  }
-  footer a{color:var(--tinta-soft)}
-  .noresult{
-    padding:60px 0;text-align:center;font-family:"Spectral",serif;font-style:italic;
-    font-size:18px;color:var(--tinta-faint);
-  }
+/* cuántas */
+.cuantas-txt p{font-family:var(--serif);font-size:1.12rem;line-height:1.62;margin:0 0 14px;max-width:66ch}
+.cuantas-tabla{margin-top:18px;border-collapse:collapse;width:100%;max-width:640px;font-size:1.02rem}
+.cuantas-tabla td{padding:9px 0;border-bottom:1px solid var(--linea);vertical-align:top}
+.cuantas-tabla td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;padding-left:16px}
+.cuantas-tabla tr.total td{border-bottom:2px solid var(--tinta);font-weight:700}
 
-  /* print */
-  .noprint{}
-  @media print{
-    body{background:#fff;color:#000;font-size:12px}
-    .hero{background:#fff;color:#000}
-    .hero .wrap{padding-top:20px;padding-bottom:20px}
-    .hero h1,.hero .stats .s .n{color:#000}
-    .hero .lede{color:#333}
-    .stats{border-top:1px solid #000}
-    .stats .s .n{color:#000!important}
-    .controls,.btn-print{display:none!important}
-    .roznai{background:#fff;color:#000;border:1.5px solid #000}
-    .roznai h2,.roznai b{color:#000}
-    .roznai p,.roznai .trio .d{color:#222}
-    .card,.grupo,.roznai{break-inside:avoid}
-    .card{display:grid}
-  }
+footer{border-top:1px solid var(--linea);padding-block:32px 56px;color:var(--tinta-2);font-size:.98rem}
+footer p{margin:0 0 10px;max-width:80ch}
+.arriba{position:fixed;right:18px;bottom:18px;z-index:30;font:inherit;font-weight:700;font-size:1rem;background:var(--tinta);color:var(--papel);border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 2px 8px rgba(27,31,28,.25)}
 
-  .btn-print{
-    font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;
-    color:#18222e;background:#f4f1e8;border:1px solid #f4f1e8;
-    border-radius:3px;padding:12px 20px;cursor:pointer;margin-top:34px;
-    display:inline-flex;align-items:center;gap:9px;
-    box-shadow:0 2px 12px rgba(0,0,0,.3);
-    transition:transform .1s ease,box-shadow .12s ease;
-  }
-  .btn-print:hover{box-shadow:0 5px 18px rgba(0,0,0,.4);transform:translateY(-1px)}
-  .btn-print svg{flex:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-  @media (prefers-reduced-motion:no-preference){
-    .btn-print{transition:background .12s}
-  }
+/* impresión: solo la lista */
+@media print{
+  @page{margin:16mm}
+  body{background:#fff;font-size:11pt}
+  .barra,.indice,.portada,.herramientas,.arriba,#como,#inconstitucional,#cuantas,footer .no-imp,.solo-pantalla{display:none!important}
+  .seccion{border:0;padding:0}
+  #leyes .bajada{display:none}
+  #leyes h2::after{content:" (actualizado al 17 de noviembre de 2026)";font-size:11pt;font-weight:400}
+  .periodo{break-inside:auto;margin-top:16px}
+  .ley{break-inside:avoid;padding:8px 0;grid-template-columns:8rem 1fr}
+  .ley .materia{font-size:11pt}
+  .art,.sello{background:none!important;border:1px solid #999;padding:0 5px}
+  a{color:#000}
+}
 </style>
 </head>
 <body>
 
-  <header class="hero">
-    <div class="wrap">
-      <p class="marca">Constitución Política del Perú</p>
-      <h1>Las reformas a la Constitución de 1993</h1>
-      <p class="lede">Treinta y dos años, más de treinta leyes de reforma, y los límites que ni siquiera una mayoría puede cruzar.</p>
+<header class="barra">
+  <div class="envoltura">
+    <a class="sitio" href="./"><b aria-hidden="true">§</b>Constitución de 1993</a>
+    <nav class="paginas" aria-label="Páginas">
+      <a href="./" aria-current="page">Reformas</a>
+      <a href="votaciones.html">Matemática constitucional</a>
+    </nav>
+    <button class="btn-letra" type="button" id="btnLetra" aria-pressed="false">Agrandar letra</button>
+  </div>
+</header>
+<nav class="indice" aria-label="Secciones de esta página">
+  <div class="envoltura">
+    <a href="#mapa">Mapa por artículo</a>
+    <a href="#leyes">Todas las leyes</a>
+    <a href="#como">Cómo se reforma</a>
+    <a href="#inconstitucional">Reformas inconstitucionales</a>
+    <a href="#cuantas">¿Cuántas son?</a>
+  </div>
+</nav>
 
-      <div class="stats">
-        <div class="s"><span class="n">30+</span><span class="k">leyes de reforma constitucional (1995&ndash;2024)</span></div>
-        <div class="s"><span class="n">110</span><span class="k">artículos modificados</span></div>
-        <div class="s"><span class="n">57,65%</span><span class="k">del texto original alterado</span></div>
-        <div class="s oro"><span class="n">3</span><span class="k">ratificadas por referéndum</span></div>
-        <div class="s car"><span class="n">3</span><span class="k">anuladas por el Tribunal Constitucional</span></div>
-      </div>
-
-      <button class="btn-print" onclick="window.print()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>Imprimir o guardar como PDF</button>
+<main>
+<section class="portada" id="mapa">
+  <div class="envoltura">
+    <div class="titulo">
+      <h1>La Constitución de 1993 y sus reformas</h1>
+      <p class="entrada">Treinta y cinco leyes de reforma en casi treinta y tres años. Cada casilla del mapa es un artículo: cuanto más oscura, más veces se ha reformado.</p>
     </div>
-  </header>
 
-  <div class="controls noprint">
-    <div class="wrap">
-      <label class="search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Buscar: ley, artículo, año, materia o gobierno…" autocomplete="off">
-      </label>
-      <div class="filtros" id="filtros">
-        <button class="fbtn" data-f="todas" aria-pressed="true">Todas</button>
-        <button class="fbtn oro" data-f="referendum" aria-pressed="false">Por referéndum</button>
-        <button class="fbtn car" data-f="anulada" aria-pressed="false">Anuladas por el TC</button>
-        <button class="fbtn" data-f="estructural" aria-pressed="false">Estructurales</button>
+      <div class="preguntar">
+        <label for="artInput">¿Qué leyes cambiaron un artículo?</label>
+        <form class="fila-art" id="artForm">
+          <input id="artInput" inputmode="text" autocomplete="off" placeholder="Ej. 206" aria-describedby="artAyuda">
+          <button type="submit">Ver artículo</button>
+        </form>
+        <p class="atajos" id="artAyuda">Escriba el número o toque una casilla. Pruebe con
+          <button type="button" data-art="2">2</button>,
+          <button type="button" data-art="93">93</button>,
+          <button type="button" data-art="112">112</button>,
+          <button type="button" data-art="191">191</button> o
+          <button type="button" data-art="206">206</button>.</p>
+        <div class="ficha" id="ficha" aria-live="polite"></div>
       </div>
-      <span class="conteo" id="conteo"></span>
+
+    <div class="mapa-caja">
+      <h2>Mapa de la Constitución</h2>
+      <p class="guia">Del artículo 1 al 206, con los artículos añadidos después de 1993 en su lugar.</p>
+      <div class="mapa" id="mapaGrid" role="group" aria-label="Artículos de la Constitución"></div>
+      <div class="leyenda" aria-hidden="true">
+        <span><i></i>Sin reformas</span>
+        <span><i class="n1"></i>1 reforma</span>
+        <span><i class="n2"></i>2 reformas</span>
+        <span><i class="n3"></i>3 o más</span>
+        <span><i class="nuevo"></i>Añadido después de 1993</span>
+      </div>
+      <p class="cifra-mapa" id="cifraMapa"></p>
     </div>
   </div>
+</section>
 
-  <main class="wrap">
-    <div id="lista"></div>
-    <div class="noresult" id="noresult" style="display:none">Ninguna reforma coincide con esa búsqueda.</div>
+<section class="seccion" id="leyes">
+  <div class="envoltura">
+    <h2>Todas las leyes, por período de gobierno</h2>
+    <p class="bajada">Escriba una palabra, un número de ley, un artículo o un año. La lista se filtra mientras escribe.</p>
 
-    <section class="roznai">
-      <p class="et">El caso peruano de Roznai</p>
-      <h2>Cuando la reforma es, ella misma, inconstitucional</h2>
-      <p>El poder de reformar la Constitución (poder constituyente <b>derivado</b>) no es soberano: emana de la propia Constitución y no puede destruir la fuente de la que nace. Por eso una reforma puede cumplir todos los pasos del artículo&nbsp;206 y, aun así, ser inconstitucional.</p>
-      <p>En 2021 el Congreso partió una legislatura ordinaria en dos para simular las «dos legislaturas sucesivas» que exige la segunda vía del 206, saltándose el <b>período de reflexión</b> que esa vía protege. El Tribunal Constitucional (Sentencia 918/2021) anuló esa maniobra y, por conexión, las tres reformas aprobadas en esa «cuarta legislatura»:</p>
-      <div class="trio">
-        <div class="t"><div class="ley">Ley 31280</div><div class="d">Juicio de residencia para el Presidente y los gobernadores regionales (arts. 99 y 191).</div></div>
-        <div class="t"><div class="ley">Ley 31304</div><div class="d">Refuerzo de la protección del patrimonio cultural de la Nación.</div></div>
-        <div class="t"><div class="ley">Ley 31305</div><div class="d">Levantamiento del secreto bancario y la reserva tributaria por la Contraloría.</div></div>
+    <div class="herramientas">
+      <label class="buscador">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="q" type="search" placeholder="Ej. inmunidad, 31988, agua, 2018" autocomplete="off" aria-label="Buscar en las leyes de reforma">
+        <button type="button" id="limpiar" hidden>Borrar</button>
+      </label>
+      <div class="filtros" id="filtros" role="group" aria-label="Mostrar">
+        <button class="filtro" type="button" data-f="todas" aria-pressed="true">Todas</button>
+        <button class="filtro ref" type="button" data-f="referendum" aria-pressed="false">Ratificadas por referéndum</button>
+        <button class="filtro anu" type="button" data-f="anulada" aria-pressed="false">Anuladas por el TC</button>
+        <button class="filtro" type="button" data-f="grande" aria-pressed="false">Las más extensas</button>
+        <span class="conteo" id="conteo" aria-live="polite"></span>
       </div>
-      <p>La lección conecta con los <b>límites materiales</b>: hay un núcleo &mdash;dignidad, soberanía del pueblo, Estado democrático de derecho, forma republicana&mdash; que ninguna reforma puede tocar, ni siquiera aprobada por referéndum. La voz del pueblo no siempre es la voz de Dios.</p>
-    </section>
+    </div>
 
-    <section class="nota-metodo">
-      <h3>Sobre el número: por qué las cifras no coinciden</h3>
-      <p>El total depende del criterio de conteo. Si se cuentan <b>leyes</b> de reforma se llega a unas <b>30&ndash;32</b>; si se cuentan <b>artículos</b> modificados, se superan los <b>110</b> (el 57,65&nbsp;% del texto original); y entre modificaciones, incorporaciones y supresiones hay aún más «cambios». Una sola ley, la 31988 (bicameralidad), reformó 53 artículos de golpe.</p>
-      <p>Este registro recoge las leyes de reforma publicadas en <b>El Peruano</b> y los registros del Congreso, verificadas contra las sentencias del Tribunal Constitucional. Las tres reformas anuladas se muestran tachadas, en su lugar cronológico, para conservar la honestidad de la línea de tiempo.</p>
-    </section>
+    <div id="lista"></div>
+    <p class="sin-resultados" id="sinResultados" hidden>Ninguna ley coincide con esa búsqueda. Pruebe con otra palabra o toque <b>Borrar</b>.</p>
+    <div class="acciones-lista solo-pantalla" style="margin-top:22px">
+      <button class="btn-sec" type="button" onclick="window.print()">Imprimir la lista</button>
+    </div>
+  </div>
+</section>
 
-    <footer>
-      Fuentes: Diario Oficial El Peruano · Congreso de la República del Perú · Tribunal Constitucional (Sentencia 918/2021, Exps. 0019/0021/0022-2021-PI/TC; Sentencia 00001-2023-PI/TC) · verificación de PerúCheck (2026).<br>
-      Registro de estudio sobre la Constitución de 1993. El total de reformas varía según el criterio de conteo.
-    </footer>
-  </main>
+<section class="seccion" id="como">
+  <div class="envoltura">
+    <h2>Cómo se reforma la Constitución</h2>
+    <p class="bajada">El artículo 206 ofrece dos caminos. Desde julio de 2026 cada uno exige el acuerdo de las dos cámaras: 130 diputados y 60 senadores.</p>
+
+    <div class="vias">
+      <article class="via">
+        <h3>Con referéndum</h3>
+        <p class="quien">Mayoría absoluta del número legal de cada cámara, y después el pueblo decide.</p>
+        <ol class="pasos">
+          <li><div>Vota la Cámara de Diputados
+            <div class="votos"><span><b>66</b>de 130</span></div></div></li>
+          <li><div>Vota el Senado
+            <div class="votos"><span><b>31</b>de 60</span></div></div></li>
+          <li><div>Se ratifica en referéndum. Así pasaron las tres reformas de diciembre de 2018.</div></li>
+        </ol>
+      </article>
+      <article class="via dos">
+        <h3>Sin referéndum</h3>
+        <p class="quien">Más de dos tercios del número legal de cada cámara, en dos legislaturas ordinarias sucesivas.</p>
+        <ol class="pasos">
+          <li><div>Primera legislatura: votan ambas cámaras
+            <div class="votos"><span><b>87</b>de 130</span><span><b>41</b>de 60</span></div></div></li>
+          <li><div>Legislatura siguiente: vuelven a votar ambas cámaras
+            <div class="votos"><span><b>87</b>de 130</span><span><b>41</b>de 60</span></div></div></li>
+          <li><div>No hay referéndum. Salvo las tres de 2018, todas las reformas se aprobaron sin consulta popular.</div></li>
+        </ol>
+        <p class="pie">¿Por qué 41 y no 40? Dos tercios de 60 son exactamente 40, y el artículo 206 exige una votación «superior a los dos tercios».</p>
+      </article>
+    </div>
+
+    <div class="reglas">
+      <div class="regla"><h4>Quién puede proponerla</h4><p>El presidente de la República con aprobación del Consejo de Ministros, los diputados y el 0,3 % de la población electoral con firmas comprobadas. Los senadores no tienen esa iniciativa.</p></div>
+      <div class="regla"><h4>Sin veto del Ejecutivo</h4><p>La ley de reforma constitucional no puede ser observada por el presidente de la República.</p></div>
+      <div class="regla"><h4>Antes de 2026</h4><p>Con el Congreso unicameral de 130 miembros bastaban 66 votos más referéndum, u 87 en dos legislaturas sucesivas. Hasta 2011, con 120 congresistas, eran 61 y 81.</p></div>
+    </div>
+
+    <div class="aviso-calc solo-pantalla">
+      <p>¿Cuántos votos hacen falta para censurar a un ministro, elegir al TC o aprobar una ley orgánica?</p>
+      <a href="votaciones.html">Abrir la calculadora de votaciones</a>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="inconstitucional">
+  <div class="envoltura">
+    <h2>Cuando la reforma es, ella misma, inconstitucional</h2>
+    <div class="dos-col">
+      <div class="texto">
+        <p>El poder de reforma es un poder constituido: nace de la Constitución y queda sujeto a sus límites. Los formales están en el procedimiento del artículo 206. Los materiales forman el núcleo de identidad que el Tribunal Constitucional extrajo del artículo 3 en la STC 0014-2002-AI/TC: dignidad humana, soberanía del pueblo, Estado democrático de derecho y forma republicana de gobierno. De ahí la tesis de Yaniv Roznai: una reforma constitucional puede ser inconstitucional.</p>
+        <p>El Perú ya tiene un caso por la vía formal. En junio de 2021 el Congreso aprobó la Resolución Legislativa 021-2020-2021-CR, que modificó su Reglamento para crear una cuarta legislatura ordinaria, del 13 de junio al 16 de julio de 2021, y votar en ella por segunda vez varias reformas por la vía que no exige referéndum. El 11 de noviembre de 2021 el Tribunal Constitucional declaró inconstitucional esa resolución por unanimidad (expedientes acumulados 00019, 00021 y 00022-2021-PI/TC), y con ella cayeron tres leyes.</p>
+        <p>El vicio era de procedimiento, no de contenido: en 2022 el Congreso volvió a aprobar dos de esas reformas por la vía correcta, como Leyes 31414 y 31507.</p>
+      </div>
+      <aside class="anuladas">
+        <h3>Las tres leyes anuladas</h3>
+        <ul>
+          <li><b>Ley 31280</b><span>El expresidente debía permanecer en el país al menos un año después de dejar el cargo (art. 112).</span></li>
+          <li><b>Ley 31304</b><span>Los bienes culturales no descubiertos del subsuelo y de zonas subacuáticas pasaban a ser del Estado (art. 21). Reaprobada como Ley 31414.</span></li>
+          <li><b>Ley 31305</b><span>La Contraloría y la SBS podían levantar el secreto bancario y la reserva tributaria (art. 2, inc. 5). Reaprobada como Ley 31507.</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="cuantas">
+  <div class="envoltura">
+    <h2>¿Cuántas reformas tiene la Constitución?</h2>
+    <div class="cuantas-txt" style="margin-top:18px">
+      <p>Depende de cómo se cuente. El registro de leyes de reforma del Congreso enumera 33. Esta página suma 35 leyes de reforma y muestra aparte la Ley 32265, por dos razones.</p>
+      <p>La primera: tres leyes que El Peruano publicó como «Ley de Reforma Constitucional» no figuran en ese registro, aunque el Compendio Normativo 2026 del Tribunal Constitucional sí las recoge. Son la 32135, la 32145 y la 32188, las tres de 2024.</p>
+      <p>La segunda: la Ley 32265 está en el registro, pero no se tramitó como reforma del artículo 206. Es una ley que deroga la Ley 27600 y devuelve la firma de Alberto Fujimori al texto de la Constitución, y se aprobó con 57 votos en segunda votación, menos de los 66 que el artículo 206 exigía incluso para la vía del referéndum.</p>
+      <p>Una precisión más: la ley de los impedimentos para postular (artículos 34-A y 39-A) se publicó como Ley 31042, y una fe de erratas del 20 de septiembre de 2020 corrigió su número a 31043.</p>
+    </div>
+    <table class="cuantas-tabla">
+      <tbody>
+        <tr><td>Leyes en el registro del Congreso</td><td>33</td></tr>
+        <tr><td>Menos la Ley 32265, que no es ley de reforma</td><td>−1</td></tr>
+        <tr><td>Más las leyes 32135, 32145 y 32188</td><td>+3</td></tr>
+        <tr class="total"><td>Leyes de reforma constitucional</td><td>35</td></tr>
+        <tr><td>De ellas, ratificadas por referéndum</td><td>3</td></tr>
+        <tr><td>De ellas, anuladas por el Tribunal Constitucional</td><td>3</td></tr>
+        <tr><td>Artículos modificados por una sola ley, la 31988</td><td>53</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <p><b>Fuentes.</b> Congreso de la República, <a href="https://www3.congreso.gob.pe/diariodebates/leyesrefconstit/" target="_blank" rel="noopener">registro de leyes de reforma constitucional</a>. Diario Oficial El Peruano, normas legales. Tribunal Constitucional, <a href="https://cec.sedetc.gob.pe/RECURSOS/CONTENIDO/2026/0e2ae90f-b53a-453e-b462-4c55780ff06c.pdf" target="_blank" rel="noopener">Compendio Normativo 2026</a>, STC 0014-2002-AI/TC y sentencia del 11 de noviembre de 2021 (Exps. 00019, 00021 y 00022-2021-PI/TC). Las fechas son las de publicación en El Peruano.</p>
+    <p>Actualizado al 17 de noviembre de 2026. La última ley que modificó el texto es la 32265, del 22 de marzo de 2025. Preparado por Gabriel Paucar.</p>
+  </div>
+</footer>
+
+<button class="arriba solo-pantalla" type="button" id="arriba" hidden onclick="window.scrollTo({top:0})">Volver arriba</button>
 
 <script>
+/* ===================== DATOS ===================== */
+/* A: artículos que cada ley modifica, incorpora o deroga (claves del mapa). */
+const L31988 = ["2","39","56","57","78","79","80","81","82","86","87","90","91","92","93","94","95","96","97","98","99","100","101","102","104","105","106","107","108","117","118","129","130","131","132","133","134","135","136","137","139","142","150","157","161","162","182","183","191","194","201","203","206","102-A","102-B","90-A"];
+const rango = (a,b)=>Array.from({length:b-a+1},(_,i)=>String(a+i));
+
 const R = [
-  {ley:"26470", n:"Ley 26470", f:"12 jun 1995", y:1995, g:"fujimori", arts:["art. 200"], m:"Reforma de las garantías constitucionales (acciones de amparo y hábeas data).", via:"ordinaria"},
-  {ley:"26472", n:"Ley 26472", f:"13 jun 1995", y:1995, g:"fujimori", arts:["art. 77"], m:"Control, aprobación y envío del Presupuesto General de la República; regla del canon.", via:"ordinaria"},
-  {ley:"27365", n:"Ley 27365", f:"05 nov 2000", y:2000, g:"fujimori", arts:["art. 112"], m:"Elimina la reelección presidencial inmediata y recorta el mandato para convocar a elecciones en 2001.", via:"ordinaria"},
-  {ley:"27600", n:"Ley 27600", f:"16 dic 2001", y:2001, g:"toledo", arts:[], m:"Suprime la firma de Fujimori del texto y ordena el proceso de reforma constitucional.", via:"ordinaria", nota:"Revertida en 2024 por la Ley 32265, que restituyó la firma."},
-  {ley:"27680", n:"Ley 27680", f:"07 mar 2002", y:2002, g:"toledo", arts:["arts. 188–199"], m:"Reforma total del Capítulo XIV del Título IV: descentralización y gobiernos regionales.", via:"ordinaria", est:true, kw:"188 189 190 191 192 193 194 195 196 197 198 199 regiones regionales municipalidades"},
-  {ley:"28389", n:"Ley 28389", f:"17 nov 2004", y:2004, g:"toledo", arts:["art. 11","art. 103","1ª DFT"], m:"Reforma del régimen pensionario del D.L. 20530: el cierre de la «Cédula Viva».", via:"ordinaria"},
-  {ley:"28390", n:"Ley 28390", f:"17 nov 2004", y:2004, g:"toledo", arts:["art. 74","art. 107"], m:"Reconoce potestad tributaria a los gobiernos regionales y locales.", via:"ordinaria"},
-  {ley:"28480", n:"Ley 28480", f:"30 mar 2005", y:2005, g:"toledo", arts:["art. 31"], m:"Otorga el derecho al voto a los miembros de las Fuerzas Armadas y la Policía Nacional.", via:"ordinaria"},
-  {ley:"28484", n:"Ley 28484", f:"05 abr 2005", y:2005, g:"toledo", arts:["art. 87","art. 91","art. 92","art. 96","art. 101"], m:"Adecúa la denominación oficial de la Superintendencia de Banca y Seguros (SBS).", via:"ordinaria"},
-  {ley:"28607", n:"Ley 28607", f:"04 oct 2005", y:2005, g:"toledo", arts:["art. 91","art. 191","art. 194"], m:"Regula los impedimentos para postular a alcaldías y gobiernos regionales.", via:"ordinaria"},
-  {ley:"29401", n:"Ley 29401", f:"08 sep 2009", y:2009, g:"garcia", arts:["art. 80","art. 81"], m:"Plazos legales para la presentación y aprobación de la Cuenta General de la República.", via:"ordinaria"},
-  {ley:"29402", n:"Ley 29402", f:"08 sep 2009", y:2009, g:"garcia", arts:["art. 90"], m:"Amplía el número de congresistas de 120 a 130.", via:"ordinaria"},
-  {ley:"30288", n:"Ley 30288", f:"12 dic 2014", y:2014, g:"humala", arts:["art. 191","art. 194"], m:"Prohíbe la reelección inmediata de gobernadores regionales y alcaldes; mandato local de 4 años.", via:"ordinaria"},
-  {ley:"30305", n:"Ley 30305", f:"10 mar 2015", y:2015, g:"humala", arts:["art. 191","art. 194","art. 203"], m:"Redefinición técnica de «Presidente Regional» a «Gobernador Regional».", via:"ordinaria"},
-  {ley:"30588", n:"Ley 30588", f:"22 jun 2017", y:2017, g:"crisis", arts:["art. 7-A"], m:"Reconoce el acceso al agua potable como derecho constitucional de realización progresiva.", via:"ordinaria"},
-  {ley:"30650", n:"Ley 30650", f:"20 ago 2017", y:2017, g:"crisis", arts:["art. 41"], m:"Imprescriptibilidad de los delitos graves de corrupción contra el patrimonio del Estado.", via:"ordinaria"},
-  {ley:"30651", n:"Ley 30651", f:"20 ago 2017", y:2017, g:"crisis", arts:["art. 200"], m:"Regula el hábeas corpus frente a la declaración de regímenes de excepción.", via:"ordinaria"},
-  {ley:"30904", n:"Ley 30904", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 154","art. 155","art. 156"], m:"Elimina el Consejo Nacional de la Magistratura y crea la Junta Nacional de Justicia (JNJ).", via:"referendum", kw:"CNM magistratura jueces fiscales"},
-  {ley:"30905", n:"Ley 30905", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 35"], m:"Regula el financiamiento público y privado de las organizaciones políticas.", via:"referendum"},
-  {ley:"30906", n:"Ley 30906", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 90-A"], m:"Prohíbe la reelección inmediata de congresistas.", via:"referendum", nota:"Derogada en 2024 por la Ley 31988, que restituyó la reelección parlamentaria."},
-  {ley:"31042", n:"Ley 31042", f:"15 sep 2020", y:2020, g:"crisis", arts:["art. 34-A","art. 39-A"], m:"Impide postular o ejercer función pública a condenados en primera instancia por delito doloso.", via:"ordinaria"},
-  {ley:"31118", n:"Ley 31118", f:"06 feb 2021", y:2021, g:"crisis", arts:["art. 16"], m:"Ordena que el Estado invierta anualmente no menos del 6% del PBI en educación.", via:"ordinaria"},
-  {ley:"31122", n:"Ley 31122", f:"11 feb 2021", y:2021, g:"crisis", arts:["art. 93"], m:"Elimina la inmunidad parlamentaria; los delitos comunes de congresistas pasan a la Corte Suprema.", via:"ordinaria"},
-  {ley:"31280", n:"Ley 31280", f:"2021", y:2021, g:"crisis", arts:["art. 99","art. 191"], m:"Instaura el juicio de residencia para el Presidente y los gobernadores regionales.", via:"ordinaria", anulada:true},
-  {ley:"31304", n:"Ley 31304", f:"23 jul 2021", y:2021, g:"crisis", arts:["art. 21"], m:"Refuerza la protección del patrimonio cultural de la Nación.", via:"ordinaria", anulada:true},
-  {ley:"31305", n:"Ley 31305", f:"23 jul 2021", y:2021, g:"crisis", arts:["art. 2, inc. 5"], m:"Faculta a la Contraloría a solicitar el levantamiento del secreto bancario y la reserva tributaria.", via:"ordinaria", anulada:true},
-  {ley:"31507", n:"Ley 31507", f:"03 jul 2022", y:2022, g:"actual", arts:["art. 134"], m:"Regula los plazos del Ejecutivo para la disolución del Congreso.", via:"ordinaria"},
-  {ley:"31878", n:"Ley 31878", f:"13 sep 2023", y:2023, g:"actual", arts:["art. 14-A"], m:"Reconoce el acceso a internet libre, de banda ancha y seguro como derecho fundamental.", via:"ordinaria"},
-  {ley:"31988", n:"Ley 31988", f:"20 mar 2024", y:2024, g:"actual", arts:["53 artículos"], m:"Restablece la bicameralidad: Senado (60) y Cámara de Diputados (130), vigente desde las elecciones de 2026; restituye la reelección parlamentaria.", via:"ordinaria", est:true, kw:"90 105 106 107 203 206 senadores diputados insistencia bicameral cámaras"},
-  {ley:"32188", n:"Ley 32188", f:"11 dic 2024", y:2024, g:"actual", arts:["art. 7","art. 23"], m:"Sustituye en el texto «persona incapacitada» por «persona con discapacidad».", via:"ordinaria"},
-  {ley:"32189", n:"Ley 32189", f:"11 dic 2024", y:2024, g:"actual", arts:[], m:"Reconoce oficialmente al pueblo afroperuano.", via:"ordinaria"}
+  {ley:"26470", f:"12 jun 1995", y:1995, g:"fujimori", arts:["art. 200, incs. 2 y 3"], A:["200"], m:"Reforma las garantías constitucionales del amparo y el hábeas data.", via:"ordinaria", kw:"amparo habeas data garantias procesos constitucionales"},
+  {ley:"26472", f:"13 jun 1995", y:1995, g:"fujimori", arts:["art. 77"], A:["77"], m:"Modifica la asignación de los recursos del presupuesto del sector público.", via:"ordinaria", kw:"presupuesto"},
+  {ley:"27365", f:"5 nov 2000", y:2000, g:"fujimori", arts:["art. 112","1.ª y 2.ª disposiciones transitorias especiales"], A:["112"], m:"Elimina la reelección presidencial inmediata y recorta los mandatos en curso para convocar elecciones en 2001.", via:"ordinaria", kw:"reeleccion presidente mandato elecciones 2001"},
+  {ley:"27680", f:"7 mar 2002", y:2002, g:"toledo", arts:["arts. 188 a 199"], A:rango(188,199), m:"Reforma todo el capítulo XIV del título IV: descentralización, gobiernos regionales y municipalidades.", via:"ordinaria", grande:true, kw:"regiones regionales municipalidades descentralizacion capitulo xiv"},
+  {ley:"28389", f:"17 nov 2004", y:2004, g:"toledo", arts:["art. 11","art. 103","1.ª disposición final y transitoria"], A:["11","103"], m:"Cierra el régimen pensionario del D. L. 20530, la «cédula viva», y adopta en el artículo 103 la aplicación inmediata de la ley a las situaciones existentes.", via:"ordinaria", kw:"pensiones cedula viva 20530 hechos cumplidos irretroactividad"},
+  {ley:"28390", f:"17 nov 2004", y:2004, g:"toledo", arts:["art. 74","art. 107"], A:["74","107"], m:"Permite a los gobiernos regionales crear, modificar y suprimir contribuciones y tasas, y les reconoce iniciativa legislativa.", via:"ordinaria", kw:"tributos tasas contribuciones gobiernos regionales iniciativa"},
+  {ley:"28480", f:"30 mar 2005", y:2005, g:"toledo", arts:["art. 31","art. 34"], A:["31","34"], m:"Reconoce el derecho de voto a los miembros en actividad de las Fuerzas Armadas y la Policía Nacional.", via:"ordinaria", kw:"voto militares policias sufragio"},
+  {ley:"28484", f:"5 abr 2005", y:2005, g:"toledo", arts:["art. 87","art. 91","art. 92","art. 96","art. 101"], A:["87","91","92","96","101"], m:"Actualiza en esos artículos la denominación de la Superintendencia de Banca y Seguros.", via:"ordinaria", kw:"sbs superintendencia banca seguros afp"},
+  {ley:"28607", f:"4 oct 2005", y:2005, g:"toledo", arts:["art. 91","art. 191","art. 194"], A:["91","191","194"], m:"Exige a alcaldes y presidentes regionales renunciar seis meses antes de la elección para postular a otros cargos.", via:"ordinaria", kw:"alcaldes renuncia postular candidatos"},
+  {ley:"29401", f:"8 sep 2009", y:2009, g:"garcia", arts:["art. 80","art. 81"], A:["80","81"], m:"Reforma el trámite y los plazos de la Cuenta General de la República.", via:"ordinaria", kw:"cuenta general presupuesto"},
+  {ley:"29402", f:"8 sep 2009", y:2009, g:"garcia", arts:["art. 90","3.ª disposición transitoria especial"], A:["90"], m:"Eleva de 120 a 130 el número de congresistas.", via:"ordinaria", kw:"congresistas 130 numero"},
+  {ley:"30305", f:"10 mar 2015", y:2015, g:"humala", arts:["art. 191","art. 194","art. 203"], A:["191","194","203"], m:"Cambia «presidente regional» por «gobernador regional» y prohíbe la reelección inmediata de gobernadores y alcaldes.", via:"ordinaria", kw:"gobernador regional alcaldes reeleccion"},
+  {ley:"30558", f:"9 may 2017", y:2017, g:"crisis", arts:["art. 2, inc. 24, lit. f"], A:["2"], m:"Amplía de 24 a 48 horas el plazo máximo de la detención en flagrancia y suma las organizaciones criminales a los casos de excepción.", via:"ordinaria", kw:"detencion flagrancia 48 horas crimen organizado"},
+  {ley:"30588", f:"22 jun 2017", y:2017, g:"crisis", arts:["art. 7-A (nuevo)"], A:["7-A"], m:"Reconoce el acceso al agua como derecho constitucional.", via:"ordinaria", kw:"agua potable"},
+  {ley:"30650", f:"20 ago 2017", y:2017, g:"crisis", arts:["art. 41"], A:["41"], m:"Duplica el plazo de prescripción en los delitos contra la administración pública o el patrimonio del Estado y permite su imprescriptibilidad en los casos más graves.", via:"ordinaria", kw:"corrupcion prescripcion imprescriptible"},
+  {ley:"30651", f:"20 ago 2017", y:2017, g:"crisis", arts:["art. 203"], A:["203"], m:"Otorga al presidente del Poder Judicial legitimidad para interponer demandas de inconstitucionalidad.", via:"ordinaria", kw:"poder judicial inconstitucionalidad legitimacion"},
+  {ley:"30738", f:"14 mar 2018", y:2018, g:"crisis", arts:["art. 52"], A:["52"], m:"Suprime el requisito de inscribirse «durante su minoría de edad» para que los nacidos en el exterior de padre o madre peruanos sean peruanos por nacimiento.", via:"ordinaria", kw:"nacionalidad peruanos exterior"},
+  {ley:"30904", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 154","art. 155","art. 156"], A:["154","155","156"], m:"Reemplaza al Consejo Nacional de la Magistratura por la Junta Nacional de Justicia.", via:"referendum", kw:"cnm jnj magistratura jueces fiscales"},
+  {ley:"30905", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 35"], A:["35"], m:"Regula el financiamiento de las organizaciones políticas.", via:"referendum", kw:"partidos financiamiento"},
+  {ley:"30906", f:"10 ene 2019", y:2019, g:"crisis", arts:["art. 90-A (nuevo)"], A:["90-A"], m:"Prohíbe la reelección inmediata de los parlamentarios.", via:"referendum", nota:"La Ley 31988 derogó el artículo 90-A en 2024 y restableció la reelección parlamentaria.", kw:"reeleccion congresistas"},
+  {ley:"31043", f:"15 sep 2020", y:2020, g:"crisis", arts:["art. 34-A (nuevo)","art. 39-A (nuevo)"], A:["34-A","39-A"], m:"Impide postular a cargos de elección popular a quienes tengan condena en primera instancia por delito doloso y fija impedimentos para ejercer función pública.", via:"ordinaria", nota:"Se publicó como Ley 31042; una fe de erratas del 20 de septiembre de 2020 corrigió su número a 31043.", kw:"31042 impedimentos condenados candidatos sentenciados"},
+  {ley:"31097", f:"29 dic 2020", y:2020, g:"crisis", arts:["art. 16"], A:["16"], m:"Ordena destinar a la educación no menos del 6 % del PBI cada año.", via:"ordinaria", kw:"educacion pbi 6%"},
+  {ley:"31118", f:"6 feb 2021", y:2021, g:"crisis", arts:["art. 93"], A:["93"], m:"Elimina la inmunidad parlamentaria; los delitos comunes de los congresistas pasan a la Corte Suprema.", via:"ordinaria", kw:"inmunidad congresistas corte suprema"},
+  {ley:"31122", f:"10 feb 2021", y:2021, g:"crisis", arts:["art. 40"], A:["40"], m:"Habilita al personal de salud a tener doble empleo o cargo público remunerado durante una emergencia sanitaria.", via:"ordinaria", kw:"medicos salud doble empleo pandemia"},
+  {ley:"31280", f:"16 jul 2021", y:2021, g:"crisis", arts:["art. 112"], A:["112"], m:"Obliga al expresidente a permanecer en el país al menos un año después de dejar el cargo.", via:"ordinaria", anulada:true, kw:"expresidente residencia cuarta legislatura"},
+  {ley:"31304", f:"23 jul 2021", y:2021, g:"crisis", arts:["art. 21"], A:["21"], m:"Refuerza la protección del patrimonio cultural: los bienes no descubiertos del subsuelo y de zonas subacuáticas son del Estado.", via:"ordinaria", anulada:true, kw:"patrimonio cultural cuarta legislatura"},
+  {ley:"31305", f:"23 jul 2021", y:2021, g:"crisis", arts:["art. 2, inc. 5"], A:["2"], m:"Faculta a la Contraloría y a la SBS a levantar el secreto bancario y la reserva tributaria.", via:"ordinaria", anulada:true, kw:"secreto bancario reserva tributaria contraloria cuarta legislatura"},
+  {ley:"31414", f:"12 feb 2022", y:2022, g:"c2021", arts:["art. 21"], A:["21"], m:"Vuelve a aprobar el refuerzo de la protección del patrimonio cultural de la Nación.", via:"ordinaria", nota:"Reaprueba el contenido de la Ley 31304, anulada en 2021.", kw:"patrimonio cultural reaprobada"},
+  {ley:"31507", f:"3 jul 2022", y:2022, g:"c2021", arts:["art. 2, inc. 5"], A:["2"], m:"Vuelve a aprobar el levantamiento del secreto bancario y la reserva tributaria en la lucha anticorrupción.", via:"ordinaria", nota:"Reaprueba el contenido de la Ley 31305, anulada en 2021.", kw:"secreto bancario reserva tributaria reaprobada"},
+  {ley:"31878", f:"23 sep 2023", y:2023, g:"c2021", arts:["art. 2, inc. 4","art. 14-A (nuevo)"], A:["2","14-A"], m:"Reconoce el derecho de acceso a internet libre y el deber del Estado de promover las tecnologías de la información.", via:"ordinaria", kw:"internet tecnologia tic"},
+  {ley:"31988", f:"20 mar 2024", y:2024, g:"c2021", arts:["53 artículos modificados","102-A y 102-B (nuevos)","90-A (derogado)"], A:L31988, m:"Restablece la bicameralidad: Senado de 60 miembros y Cámara de Diputados de 130, desde las elecciones de 2026; restituye la reelección parlamentaria.", via:"ordinaria", grande:true, kw:"senado senadores diputados bicameral camaras bicameralidad reeleccion"},
+  {ley:"32135", f:"15 oct 2024", y:2024, g:"c2021", arts:["4.ª disposición transitoria especial (nueva)","3.ª disposición transitoria especial (derogada)"], A:[], m:"Autoriza, por excepción, al Congreso de 2021–2026 a elaborar y aprobar los reglamentos del Senado y de la Cámara de Diputados.", via:"ordinaria", nota:"No figura en el registro de reformas del Congreso; sí en El Peruano y en el Compendio Normativo 2026 del Tribunal Constitucional.", kw:"reglamento senado camara diputados disposicion transitoria"},
+  {ley:"32145", f:"29 oct 2024", y:2024, g:"c2021", arts:["art. 40"], A:["40"], m:"Habilita al personal médico y asistencial de salud a tener un segundo empleo o cargo público remunerado, y deroga el segundo párrafo del artículo.", via:"ordinaria", nota:"La Ley 31122 solo lo permitía durante una emergencia sanitaria. No figura en el registro de reformas del Congreso; sí en El Peruano y en el Compendio del TC.", kw:"medicos salud doble empleo"},
+  {ley:"32188", f:"11 dic 2024", y:2024, g:"c2021", arts:["art. 7","art. 23"], A:["7","23"], m:"Reemplaza las expresiones «persona incapacitada» e «impedido» por «persona con discapacidad».", via:"ordinaria", nota:"No figura en el registro de reformas del Congreso; sí en El Peruano y en el Compendio del TC.", kw:"discapacidad incapacitada impedido"},
+  {ley:"32189", f:"11 dic 2024", y:2024, g:"c2021", arts:["título del cap. VI, tít. III","art. 89"], A:["89"], m:"Reconoce al pueblo afroperuano.", via:"ordinaria", kw:"afroperuano comunidades"},
+  {ley:"32265", f:"22 mar 2025", y:2025, g:"c2021", arts:["firma del texto de 1993"], A:[], m:"Deroga la Ley 27600 (2001) y restituye la firma de Alberto Fujimori en el texto de la Constitución.", via:"ley", nota:"No es una ley de reforma del artículo 206: se aprobó con 57 votos en segunda votación, menos de los 66 que exigía incluso la vía del referéndum. El registro del Congreso la incluye porque cambia el texto de la Constitución.", kw:"27600 firma fujimori ley ordinaria"}
 ];
 
 const GRUPOS = [
-  {g:"fujimori", yr:"1994–2001", nom:"Fujimori y la transición"},
-  {g:"toledo",   yr:"2001–2006", nom:"Gobierno de Alejandro Toledo"},
+  {g:"fujimori", yr:"1993–2001", nom:"Alberto Fujimori y la transición"},
+  {g:"toledo",   yr:"2001–2006", nom:"Alejandro Toledo"},
   {g:"garcia",   yr:"2006–2011", nom:"Segundo gobierno de Alan García"},
-  {g:"humala",   yr:"2011–2016", nom:"Gobierno de Ollanta Humala"},
-  {g:"crisis",   yr:"2016–2021", nom:"La crisis política: PPK, Vizcarra, Merino, Sagasti"},
-  {g:"actual",   yr:"2021–2026", nom:"Congreso actual: Castillo y Boluarte"}
+  {g:"humala",   yr:"2011–2016", nom:"Ollanta Humala"},
+  {g:"crisis",   yr:"2016–2021", nom:"Kuczynski, Vizcarra, Merino y Sagasti"},
+  {g:"c2021",    yr:"2021–2026", nom:"Castillo, Boluarte, Jerí y Balcázar", vacioNota:"Durante los gobiernos de José Jerí y José María Balcázar no se publicó ninguna."},
+  {g:"actual",   yr:"Desde 2026", nom:"Keiko Fujimori y el Congreso bicameral", vacio:"Hasta el 17 de noviembre de 2026 el Congreso bicameral no ha publicado ninguna ley de reforma."}
 ];
 
-const GMAP=Object.fromEntries(GRUPOS.map(x=>[x.g,x.nom+" "+x.yr]));
-const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-const lista = document.getElementById('lista');
-const conteo = document.getElementById('conteo');
-const noresult = document.getElementById('noresult');
-const q = document.getElementById('q');
-let filtro = "todas";
+/* ===================== UTILIDADES ===================== */
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const GNOM = Object.fromEntries(GRUPOS.map(x=>[x.g, x.nom+' '+x.yr]));
 
+/* ===================== MAPA ===================== */
+const NUEVOS = {"7":["7-A"],"14":["14-A"],"34":["34-A"],"39":["39-A"],"90":["90-A"],"102":["102-A","102-B"]};
+const CLAVES = [];
+for(let i=1;i<=206;i++){ CLAVES.push(String(i)); (NUEVOS[i]||[]).forEach(k=>CLAVES.push(k)); }
+
+const porArt = {};
+R.forEach(r => r.A.forEach(k => { (porArt[k] = porArt[k] || []).push(r); }));
+const vigentes = k => (porArt[k]||[]).filter(r=>!r.anulada);
+const derogado = k => k==="90-A";
+
+function nivel(k){ const n = vigentes(k).length; return n>=4?4:n; }
+
+const grid = $('mapaGrid');
+grid.innerHTML = CLAVES.map(k=>{
+  const n = vigentes(k).length;
+  const cls = ['celda', n?('n'+Math.min(n,4)):'', k.includes('-')?'nuevo':'', derogado(k)?'derogado':''].filter(Boolean).join(' ');
+  const txt = n===0 ? 'sin reformas' : (n===1 ? '1 reforma' : n+' reformas');
+  return '<button type="button" class="'+cls+'" data-k="'+k+'" aria-pressed="false" aria-label="Artículo '+k+', '+txt+'">'+k+'</button>';
+}).join('');
+
+/* cifra bajo el mapa */
+(function(){
+  const base = CLAVES.filter(k=>!k.includes('-'));
+  const tocados = base.filter(k=>vigentes(k).length>0).length;
+  const pct = Math.round(tocados/206*100);
+  $('cifraMapa').innerHTML = '<b>'+tocados+' de los 206 artículos</b> originales (cerca del '+pct+' %) han sido modificados al menos una vez por una ley vigente. Además se añadieron siete artículos nuevos, y uno de ellos, el 90-A, ya fue derogado. Cuentan aparte las disposiciones finales y transitorias que cambiaron las leyes 27365, 28389, 29402 y 32135.';
+})();
+
+function mostrarArticulo(k, desplazar){
+  k = String(k).trim().toUpperCase().replace(/\s+/g,'').replace(/^ART(ICULO|\.)?/,'');
+  k = k.replace(/^(\d+)([A-B])$/,'$1-$2');
+  const ficha = $('ficha');
+  if(!CLAVES.includes(k)){
+    ficha.innerHTML = '<h3>No hay artículo «'+esc(k||' ')+'»</h3><p class="resumen">Escriba un número del 1 al 206, o uno de los añadidos: 7-A, 14-A, 34-A, 39-A, 90-A, 102-A o 102-B.</p>';
+    return;
+  }
+  grid.querySelectorAll('.celda').forEach(c=>c.setAttribute('aria-pressed', c.dataset.k===k?'true':'false'));
+  $('artInput').value = k;
+  const leyes = (porArt[k]||[]).slice().sort((a,b)=>a.ley.localeCompare(b.ley));
+  const v = leyes.filter(r=>!r.anulada).length;
+  let resumen;
+  if(!leyes.length) resumen = 'Ninguna ley de reforma lo ha modificado. Conserva su texto de 1993.';
+  else if(k.includes('-')) resumen = derogado(k) ? 'Artículo añadido en 2019 y derogado en 2024.' : 'Artículo que no existía en 1993: lo añadió una reforma.';
+  else resumen = v===1 ? 'Modificado por 1 ley vigente.' : 'Modificado por '+v+' leyes vigentes.';
+  if(leyes.some(r=>r.anulada)) resumen += ' Incluye una ley anulada por el Tribunal Constitucional.';
+  ficha.innerHTML = '<h3>Artículo '+k+'</h3><p class="resumen">'+resumen+'</p>' + (leyes.length ? '<ol>'+leyes.map(r=>
+    '<li class="'+(r.anulada?'anulada':'')+'"><span class="n"><b>Ley '+r.ley+'</b><span class="f">'+r.f+'</span></span><span class="m">'+r.m+(r.anulada?'<br><span class="etq">Anulada por el TC en 2021</span>':'')+(k==='90-A'&&r.ley==='31988'?'<br><span class="etq" style="color:var(--tinta-2)">La ley que lo derogó</span>':'')+'</span></li>'
+  ).join('')+'</ol>' : '');
+  if(desplazar && window.matchMedia('(max-width:900px)').matches){ ficha.scrollIntoView({block:'nearest'}); }
+}
+grid.addEventListener('click', e=>{ const b=e.target.closest('.celda'); if(b) mostrarArticulo(b.dataset.k, true); });
+$('artForm').addEventListener('submit', e=>{ e.preventDefault(); mostrarArticulo($('artInput').value, true); });
+document.querySelectorAll('.atajos button').forEach(b=>b.addEventListener('click',()=>mostrarArticulo(b.dataset.art, true)));
+mostrarArticulo('206', false);
+
+/* ===================== LISTA ===================== */
+let filtro = 'todas';
+const q = $('q');
+function estadoKw(r){
+  const k=[];
+  if(r.via==='referendum') k.push('referendum 2018 consulta popular');
+  if(r.anulada) k.push('anulada anuladas inconstitucional tribunal constitucional tc');
+  if(r.grande) k.push('extensa estructural');
+  if(r.nota) k.push(r.nota);
+  return k.join(' ');
+}
+function coincide(r, terminos){
+  if(filtro==='referendum' && r.via!=='referendum') return false;
+  if(filtro==='anulada' && !r.anulada) return false;
+  if(filtro==='grande' && !r.grande) return false;
+  if(!terminos.length) return true;
+  const texto = norm(['ley '+r.ley, r.ley, r.f, String(r.y), r.m, r.arts.join(' '), r.A.map(a=>'art '+a+' articulo '+a).join(' '), GNOM[r.g]||'', r.kw||'', estadoKw(r)].join(' '));
+  return terminos.every(t=>texto.includes(t));
+}
 function sello(r){
-  if(r.anulada) return '<span class="sello car">Anulada por el TC</span>';
-  if(r.via==="referendum") return '<span class="sello oro">Referéndum 2018</span>';
-  if(r.est) return '<span class="sello est">Reforma estructural</span>';
+  if(r.anulada) return '<span class="sello anu">Anulada por el TC</span>';
+  if(r.via==='referendum') return '<span class="sello ref">Referéndum de 2018</span>';
+  if(r.via==='ley') return '<span class="sello ord">Ley ordinaria</span>';
+  if(r.grande) return '<span class="sello gra">Reforma extensa</span>';
   return '';
 }
-function statusKw(r){
-  const k=[];
-  if(r.via==="referendum") k.push("referendum voto popular urnas 2018");
-  if(r.anulada) k.push("anulada anuladas inconstitucional inconstitucionales derogada tc tribunal constitucional");
-  if(r.est) k.push("estructural");
-  if(r.nota) k.push(r.nota);
-  return k.join(" ");
-}
-function match(r, term){
-  if(filtro==="referendum" && r.via!=="referendum") return false;
-  if(filtro==="anulada" && !r.anulada) return false;
-  if(filtro==="estructural" && !r.est) return false;
-  if(term){
-    const hay = norm([r.n, r.f, r.m, r.arts.join(" "), GMAP[r.g]||"", r.kw||"", statusKw(r)].join(" "));
-    const toks = term.split(/\s+/).filter(Boolean);
-    if(!toks.every(t=>hay.includes(t))) return false;
+function pintar(){
+  const terminos = norm(q.value.trim()).replace(/\bart(iculo|\.)?\s*/g,'art ').split(/\s+/).filter(Boolean);
+  // "art 2" debe buscar el artículo exacto
+  const exactos = []; const libres = [];
+  for(let i=0;i<terminos.length;i++){
+    if(terminos[i]==='art' && terminos[i+1]){ exactos.push(terminos[i+1].toUpperCase().replace(/^(\d+)([AB])$/,'$1-$2')); i++; }
+    else libres.push(terminos[i]);
   }
-  return true;
-}
-function render(){
-  const term = q.value.trim().toLowerCase();
-  let total=0, html="";
+  let total=0, html='';
   for(const grp of GRUPOS){
-    const items = R.filter(r=>r.g===grp.g && match(r,term));
-    if(!items.length) continue;
+    const items = R.filter(r=>r.g===grp.g && coincide(r,libres) && exactos.every(a=>r.A.includes(a)));
+    const buscando = libres.length || exactos.length || filtro!=='todas';
+    if(!items.length && (buscando || !grp.vacio)) continue;
     total += items.length;
-    html += '<section class="grupo"><div class="grupo-h"><span class="yr">'+grp.yr+'</span><span class="nom">'+grp.nom+'</span><span class="cnt">'+items.length+(items.length===1?' reforma':' reformas')+'</span></div>';
+    const reformas = items.filter(r=>r.via!=='ley').length;
+    const cuantas = grp.vacio && !items.length ? 'ninguna' : (reformas===1?'1 ley':reformas+' leyes') + (items.some(r=>r.via==='ley')?' y la 32265':'');
+    html += '<section class="periodo"><div class="periodo-cab"><span class="anios">'+grp.yr+'</span><h3>'+grp.nom+'<span class="cuantas">'+cuantas+'</span></h3></div>';
+    if(!items.length){ html += '<p class="vacio">'+grp.vacio+'</p>'; }
     for(const r of items){
       const chips = r.arts.map(a=>'<span class="art">'+a+'</span>').join('');
-      const s = sello(r);
-      const extra = (chips||s) ? '<div class="arts">'+chips+s+'</div>' : '';
       const nota = r.nota ? '<p class="nota">'+r.nota+'</p>' : '';
-      html += '<article class="card'+(r.anulada?' anulada':'')+(r.est?' estructural':'')+'">'
-            + '<div class="rail"><span class="num">'+r.n+'</span><span class="fecha">'+r.f+'</span></div>'
-            + '<div class="cuerpo"><p class="materia">'+r.m+'</p>'+extra+nota+'</div></article>';
+      const cls = 'ley'+(r.anulada?' anulada':'')+(r.grande?' grande':'');
+      html += '<article class="'+cls+'"><div class="num"><b>Ley '+r.ley+'</b><time class="fec">'+r.f+'</time></div>'
+            + '<div><p class="materia">'+r.m+'</p><div class="arts">'+chips+sello(r)+'</div>'+nota+'</div></article>';
     }
+    if(!buscando && grp.vacioNota && items.length){ html += '<p class="vacio" style="font-size:1rem">'+grp.vacioNota+'</p>'; }
     html += '</section>';
   }
-  lista.innerHTML = html;
-  noresult.style.display = total? 'none':'block';
-  conteo.textContent = 'Mostrando '+total+' de '+R.length;
+  $('lista').innerHTML = html;
+  $('sinResultados').hidden = total>0;
+  $('limpiar').hidden = !q.value;
+  $('conteo').textContent = total===R.length ? '35 leyes de reforma y la Ley 32265' : 'Mostrando '+total+' de '+R.length;
 }
-document.getElementById('filtros').addEventListener('click', e=>{
-  const b = e.target.closest('.fbtn'); if(!b) return;
+$('filtros').addEventListener('click', e=>{
+  const b = e.target.closest('.filtro'); if(!b) return;
   filtro = b.dataset.f;
-  document.querySelectorAll('.fbtn').forEach(x=>x.setAttribute('aria-pressed', x===b?'true':'false'));
-  render();
+  document.querySelectorAll('.filtro').forEach(x=>x.setAttribute('aria-pressed', x===b?'true':'false'));
+  pintar();
 });
-q.addEventListener('input', render);
-render();
+q.addEventListener('input', pintar);
+$('limpiar').addEventListener('click', ()=>{ q.value=''; pintar(); q.focus(); });
+pintar();
+
+/* ===================== LETRA GRANDE Y VOLVER ARRIBA ===================== */
+const btnLetra = $('btnLetra');
+function letra(on){
+  document.documentElement.classList.toggle('grande', on);
+  btnLetra.setAttribute('aria-pressed', on?'true':'false');
+  btnLetra.textContent = on ? 'Letra normal' : 'Agrandar letra';
+  try{ localStorage.setItem('letraGrande', on?'1':'0'); }catch(e){}
+}
+btnLetra.addEventListener('click', ()=>letra(!document.documentElement.classList.contains('grande')));
+try{ if(localStorage.getItem('letraGrande')==='1') letra(true); }catch(e){}
+window.addEventListener('scroll', ()=>{ $('arriba').hidden = window.scrollY < 900; }, {passive:true});
 </script>
 </body>
 </html>
